@@ -24,6 +24,13 @@ public extension WhatsNew.Feature {
             self.view = { .init(image()) }
         }
         
+        /// Creates a new instance of `WhatsNew.Feature.Image`
+        /// - Parameters:
+        ///   - view: A ViewBuilder closure that produces an AnyView
+        public init(view: @autoclosure @escaping () -> AnyView) {
+            self.view = { view() }
+        }
+        
     }
 
 }
